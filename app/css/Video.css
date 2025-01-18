@@ -1,0 +1,134 @@
+
+.video-container{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin: 30px;
+  gap: 10px;
+}
+.ad1{
+  display: none;
+}
+
+.ad2{
+  margin-top: 20px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.ad3,.ad4{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.AdNative{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.section-1{
+  
+}
+
+.section-2{
+  
+}
+
+.video-title{
+  color: #313618;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 80%;
+  color: #333;
+}
+
+.video{
+  width: 100%;
+  height: 450px;
+}
+
+.related-h2{
+  color: #313618;
+  font-family: "Roboto", Sans-Serif;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.related-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.related-item{
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; 
+  text-align: center;
+  
+}
+
+.related-title {
+  font-size: 1rem;
+  padding: 5px;
+  color: #333;
+  font-family: "Roboto", Sans-Serif;
+  font-weight: bold;
+}
+
+.related-thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .video-container{
+    display: block;
+    margin: 20px;
+    height: 100%;
+  }
+  
+  .video-title{
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+  .video{
+   width: 100%;
+   height: 200px;
+  }
+  
+  .ad1{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 0;
+    justify-content: center;
+ }
+  .ad2{
+    display: none;
+ }
+  .related-container{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+  .related-item{
+    
+  }
+  .related-title{
+    font-size: 12px;
+  }
+  .related-thumbnail{
+    height: 60%;
+  }
+  .related-h2{
+    padding: 10px;
+  }
+}
