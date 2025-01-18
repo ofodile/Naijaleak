@@ -26,14 +26,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-20">
+    <div className="sticky top-0 z-20 bg-customNav">
       <nav className="bg-customNav border-gray-200 z-50 shadow-md font-roboto">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           {/* Search Button */}
           <button
             type="button"
             onClick={toggleSearch}
-            className="md:hidden dark:font-bold text-gray-500 dark:text-white active:bg-gray-100 dark:active:bg-gray-700 focus:outline-none active:ring-2 active:ring-gray-200 dark:active:rounded-lg text-sm p-2.5 me-1"
+            className="md:hidden dark:font-bold text-white text-gray-500 dark:text-white active:bg-gray-100 dark:active:bg-gray-700 focus:outline-none active:ring-2 active:ring-gray-200 dark:active:rounded-lg text-sm p-2.5 me-1"
           >
             <svg
               className="w-5 h-5"
@@ -54,7 +54,7 @@ const Navbar = () => {
           </button>
 
           <a href="/" className="flex items-center space-x-1 rtl:space-x-reverse">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white font-montserrat">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white font-montserrat">
               Naijaleakhub
             </span>
           </a>
@@ -64,7 +64,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={toggleMenu}
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 dark:text-white active:bg-gray-100 dark:active:bg-gray-700 focus:outline-none"
+              className="inline-flex text-white items-center p-2 w-10 h-10 justify-center text-gray-500 dark:text-white active:bg-gray-100 dark:active:bg-gray-700 focus:outline-none md:hidden"
             >
               <svg
                 className="w-5 h-5"
@@ -90,35 +90,35 @@ const Navbar = () => {
               isMenuOpen ? "block" : "hidden"
             } items-center justify-between w-full md:flex md:w-auto md:order-1`}
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-customNav md:dark:bg-customNav">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 bg-customNav rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-customNav dark:bg-customNav md:dark:bg-customNav">
               {/* Menu Items */}
               <li>
-                <a href="/" className="block py-2 px-3 text-gray-900 dark:text-white">
+                <a href="/" className="block py-2 text-white px-3 text-gray-900 dark:text-white dark:font-bold font-bold">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/teen" className="block py-2 px-3 text-gray-900 dark:text-white">
+                <a href="/teen" className="block py-2 text-white px-3 text-gray-900 dark:text-white dark:font-bold font-bold">
                   Teen
                 </a>
               </li>
               <li>
-                <a href="/blowjob" className="block py-2 px-3 text-gray-900 dark:text-white">
+                <a href="/blowjob" className="block py-2 text-white px-3 text-gray-900 dark:text-white dark:font-bold font-bold">
                   Blowjob
                 </a>
               </li>
               <li>
-                <a href="/lesbian" className="block py-2 px-3 text-gray-900 dark:text-white">
+                <a href="/lesbian" className="block py-2 text-white px-3 text-gray-900 dark:text-white dark:font-bold font-bold">
                   Lesbian
                 </a>
               </li>
               <li>
-                <a href="/celebrities" className="block py-2 px-3 text-gray-900 dark:text-white">
+                <a href="/celebrities" className="block py-2 text-white px-3 text-gray-900 dark:text-white font-bold">
                   Celebrities
                 </a>
               </li>
               <li>
-                <a href="/masturbation" className="block py-2 px-3 text-gray-900 dark:text-white">
+                <a href="/masturbation" className="block py-2 text-white px-3 text-gray-900 dark:text-white font-bold">
                   Masturbation
                 </a>
               </li>
@@ -128,7 +128,7 @@ const Navbar = () => {
 
         {/* Search Box */}
         {isSearchOpen && (
-          <div className="search-box flex p-4 bg-gray-200 dark:bg-customNav">
+          <div className="search-box bg-customNav flex p-4 dark:bg-customNav">
             <input
               type="text"
               value={searchQuery}
@@ -144,7 +144,7 @@ const Navbar = () => {
             </button>
           </div>
         )}
-           <div className="search-box flex p-4 bg-gray-200 dark:bg-customNav hidden md:flex">
+           <div className="search-box bg-customNav flex p-4 dark:bg-customNav hidden md:flex">
             <input
               type="text"
               value={searchQuery}
