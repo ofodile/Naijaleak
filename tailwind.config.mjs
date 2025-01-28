@@ -10,6 +10,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customNav: ' #054d5b',
+        customGray: '#2F4F4F',
+      },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        alice: ['Alice', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
     },
   },

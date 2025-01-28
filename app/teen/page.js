@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import './css/category.css';
-import client from './contentfulClient';
-import Adcomponent1 from './components/Adcomponent1';
-import Adcomponent2 from './components/Adcomponent2';
+import '../css/category.css';
+import client from '../contentfulClient';
+import Adcomponent1 from '../components/Adcomponent1';
+import Adcomponent2 from '../components/Adcomponent2';
 
-export default async function Home({ searchParams }) {
+export default async function Teen({ searchParams }) {
   // Await searchParams
   const params = await searchParams;
   const currentPage = parseInt(params.page || '1', 10);
@@ -14,6 +14,7 @@ export default async function Home({ searchParams }) {
 
   const res = await client.getEntries({
     content_type: 'exclusivefab',
+    'fields.tag': 'Teen',
     limit: itemsPerPage,
     skip,
   });
@@ -42,7 +43,6 @@ export default async function Home({ searchParams }) {
               className="thumbnail"
             />
             <h2 className="title">{item.fields.title}</h2>
-            <h6 className="tag">{item.fields.tag}</h6>
           </Link>
         ))}
 
