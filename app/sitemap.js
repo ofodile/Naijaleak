@@ -1,7 +1,7 @@
 export default function sitemap() {
     return [
       {
-        url: 'hhttps://www.naijaleakhub.com.ng',
+        url: 'https://www.naijaleakhub.com.ng',
         lastModified: new Date(),
         changeFrequency: 'daily',
         priority: 1,
@@ -458,12 +458,6 @@ export default function sitemap() {
       },
       {
         url: 'https://www.naijaleakhub.com.ng/enjoying-after-party-handjob-in-lagos',
-        lastModified: new Date(),
-        changeFrequency: 'daily',
-        priority: 0.5,
-      },
-      {
-        url: '',
         lastModified: new Date(),
         changeFrequency: 'daily',
         priority: 0.5,
@@ -1268,12 +1262,6 @@ export default function sitemap() {
       },
       {
         url: 'https://www.naijaleakhub.com.ng/kate-showing-boobs-on-live-video',
-        lastModified: new Date(),
-        changeFrequency: 'daily',
-        priority: 0.5,
-      },
-      {
-        url: '',
         lastModified: new Date(),
         changeFrequency: 'daily',
         priority: 0.5,
