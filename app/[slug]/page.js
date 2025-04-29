@@ -102,9 +102,6 @@ export default async function Video({ params }) {
         </div>
         <div className="secton-2">
           <div className="AdNative">
-             <NativeAd />
-          </div>
-          <div className="AdNative">
             <AdNative />
           </div>
         </div>
