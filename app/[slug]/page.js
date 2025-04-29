@@ -7,6 +7,7 @@ import Adcomponent4 from '../components/Adcomponent4';
 import NotFound from '../components/not-found';
 import AdNative from '../components/AdNative';
 import Adcash1 from '../components/Adcash1';
+import NativeAd from '../components/NativeAd';
 import '../css/Video.css';
 
 // Dynamically generate metadata based on the slug
@@ -99,8 +100,10 @@ export default async function Video({ params }) {
             <Adcomponent4 />
           </div>
         </div>
-
         <div className="secton-2">
+          <div className="AdNative">
+             <NativeAd />
+          </div>
           <div className="AdNative">
             <AdNative />
           </div>

@@ -45,17 +45,6 @@ export default function RootLayout({ children }) {
             `
           }}
         />
-        <Script
-          id="aclib-interstitial-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              aclib.runInterstitial({
-                zoneId: '9879446',
-              });
-            `
-          }}
-        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
