@@ -33,18 +33,6 @@ export default function RootLayout({ children }) {
           src="//stoolsymphony.com/9f/3a/db/9f3adb53ae9324b611de693d6bf93ffa.js"
           async
         ></script>
-        <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-        <Script
-          id="aclib-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              aclib.runAutoTag({
-                zoneId: '4u7qqvaiw',
-              });
-            `
-          }}
-        />
         <Script id="custom-external-script" strategy="afterInteractive">
           {`
             (function(skvp){
