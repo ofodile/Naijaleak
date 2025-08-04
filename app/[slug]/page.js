@@ -61,22 +61,22 @@ export default async function Video({ params }) {
   return (
     <>
       <div className="ad1">
-        <Adcomponent1 />
+
       </div>
       <div className="ad2">
         <Adcomponent2 />
       </div>
       <div className="video-container">
         <div className="secton-1">
-          <h1 className="video-title">{videoData?.title || 'No title available'}</h1>
           {videoData?.video?.fields?.file?.url ? (
             <video className="video" controls src={`https:${videoData.video.fields.file.url}`} />
           ) : (
             <p>Video not available</p>
           )}
+            <h1 className="video-title">{videoData?.title || 'No title available'}</h1> 
 
           <div className="ad3">
-            <Adcomponent3 />
+            <Adcomponent3 /> 
           </div>
 
           <h2 className="related-h2">Related Posts</h2>

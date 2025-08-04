@@ -1,43 +1,24 @@
 'use client'
 
-import React, { useEffect } from "react";
+import { useEffect, useState } from 'react'
 
-const Adcomponenet3 = () => {
+export default function Adcomponent3() {
+  const [showAd, setShowAd] = useState(false)
+
   useEffect(() => {
-    // Check if atAsyncOptions exists and initialize if not
-    if (typeof window.atAsyncOptions !== "object") {
-      window.atAsyncOptions = [];
-    }
+    setShowAd(true) // only show ad div on client
 
-    // Push ad options to atAsyncOptions
-    window.atAsyncOptions.push({
-      key: "d133bb74300857cd99679135032291c7",
-      format: "js",
-      async: true,
-      container: "atContainer-d133bb74300857cd99679135032291c7",
-      params: {}
-    });
+    // Inject the ad script once on mount
+    const script = document.createElement('script')
+    script.src = 'https://js.wpadmngr.com/static/adManager.js'
+    script.async = true
+    script.setAttribute('data-admpid', '334501')
+    document.body.appendChild(script)
 
-    // Dynamically create and append the script
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.async = true;
-    script.src =
-      "http" +
-      (location.protocol === "https:" ? "s" : "") +
-      "://stoolsymphony.com/d133bb74300857cd99679135032291c7/invoke.js";
-    document.head.appendChild(script);
-
-    // Cleanup: Remove the script if the component unmounts
     return () => {
-      const container = document.getElementById(
-        "atContainer-d133bb74300857cd99679135032291c7"
-      );
-      if (container) container.innerHTML = "";
-    };
-  }, []);
+      document.body.removeChild(script)
+    }
+  }, [])
 
-  return <div id="atContainer-d133bb74300857cd99679135032291c7"></div>;
-};
-
-export default Adcomponenet3;
+  return showAd ? <div data-banner-id="1451221"></div> : null
+}
