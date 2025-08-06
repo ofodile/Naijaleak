@@ -61,7 +61,7 @@ export default async function Video({ params }) {
   return (
     <>
       <div className="ad1">
-
+        <Adcomponent1 />
       </div>
       <div className="ad2">
         <Adcomponent2 />

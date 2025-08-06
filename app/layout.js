@@ -29,10 +29,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <script
-          async
-          src="https://js.wpadmngr.com/static/adManager.js"
-          data-admpid="334501"
-        />
+            type="text/javascript"
+            src="//pl25151859.profitableratecpm.com/9f/3a/db/9f3adb53ae9324b611de693d6bf93ffa.js"
+          ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -41,6 +40,10 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <GoogleAnalytics gaId="G-P2H5LD1362" />
+        <script
+            type="text/javascript"
+            src="//pl26558393.profitableratecpm.com/06/cc/2d/06cc2d36d868650de56fa622f863920b.js"
+          ></script>
       </body>
     </html>
   );
