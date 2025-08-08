@@ -13,7 +13,6 @@ export async function generateMetadata({ params }) {
   const resolvedParams = await params; 
   const { slug } = resolvedParams;
 
-
   // Fetch the video entry by slug
   const singleVideo = await client.getEntries({
     content_type: 'exclusivefab',
@@ -22,7 +21,6 @@ export async function generateMetadata({ params }) {
   });
 
   const videoData = singleVideo.items.length > 0 ? singleVideo.items[0].fields : null;
-
   const videoTitle = videoData?.title || 'Default Title';
 
   return {
@@ -35,7 +33,6 @@ export async function generateMetadata({ params }) {
 export default async function Video({ params }) {
   const resolvedParams = await params; 
   const { slug } = resolvedParams;
-
 
   // Fetch the video entry by slug
   const singleVideo = await client.getEntries({
@@ -58,6 +55,8 @@ export default async function Video({ params }) {
   });
   const relatedData = Related.items;
 
+  console.log(videoData);
+
   return (
     <>
       <div className="ad1">
@@ -70,10 +69,22 @@ export default async function Video({ params }) {
         <div className="secton-1">
           {videoData?.video?.fields?.file?.url ? (
             <video className="video" controls src={`https:${videoData.video.fields.file.url}`} />
+          ) : videoData?.photo?.length > 0 ? (
+            <div className="photo-gallery">
+              {videoData.photo.map((image, index) => (
+                <img
+                  key={index}
+                  src={`https:${image.fields.file.url}`}
+                  alt={image.fields.title || `photo-${index + 1}`}
+                  className="fallback-photo"
+                />
+              ))}
+            </div>
           ) : (
-            <p>Video not available</p>
+            <p>Video not available and no photo provided.</p>
           )}
-            <h1 className="video-title">{videoData?.title || 'No title available'}</h1> 
+
+          <h1 className="video-title">{videoData?.title || 'No title available'}</h1> 
 
           <div className="ad3">
             <Adcomponent3 /> 

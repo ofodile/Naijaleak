@@ -118,6 +118,21 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
+                <a href="/threesome" className="block py-2 text-white px-3 text-gray-900 dark:text-white font-bold">
+                  Threesome
+                </a>
+              </li>
+              <li>
+                <a href="/nude" className="block py-2 text-white px-3 text-gray-900 dark:text-white font-bold">
+                  Nude
+                </a>
+              </li>
+              <li>
+                <a href="/cumshot" className="block py-2 text-white px-3 text-gray-900 dark:text-white font-bold">
+                  Cumshot
+                </a>
+              </li>
+              <li>
                 <a href="/masturbation" className="block py-2 text-white px-3 text-gray-900 dark:text-white font-bold">
                   Masturbation
                 </a>
